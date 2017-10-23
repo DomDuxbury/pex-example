@@ -2,7 +2,7 @@ import numpy
 
 
 def fct_1():
-    pass
+    return 10
 
 
 def fct_2():

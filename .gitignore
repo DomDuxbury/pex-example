@@ -1,2 +1,4 @@
-dist/*
-pexExample.egg-info/*
+dist
+pexExample.egg-info
+__pycache__
+.cache
