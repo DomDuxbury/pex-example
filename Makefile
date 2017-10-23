@@ -1,9 +1,10 @@
-REQ = $(shell pip freeze)
+all: dev_requirements test build
 
-all: test build
+dev_requirements:
+	tail -n +4 requirements.txt > prod_requirements.txt
 
 test:
 	pytest
 
 build:
-	pex . -r requirements.txt -e pexExample.main:main -o dist/example.pex
+	pex . -r prod_requirements.txt -e pexExample.main:main -o dist/example.pex
